@@ -1,7 +1,15 @@
-Gdelt_project:
-parse analyze and map gdelt data
+================================================
+GDELT_PROJECT:  parse analyze and map gdelt data
+================================================
 
-Repositories: 
+====================
+REPOSITORY STRUCTURE: 
+==================== 
+
 GDELT_EXTRACT_SCRIPTS -> All the files needed to download GDELT data and load it into a database. You can either use it as a "oneshot" retrieving 3 years worth of data, or use the files as a daily jenkins powered job.
+
+
 DOCKER -> Everything to easily setup a dockerized postgis database on your machine including extensions, schemas, roles and tables structure. 
+
+
 JENKINS -> Everything to easily setup a dockerized jenkins container from which you can handle the daily update of your database. (Not yet implemented)
