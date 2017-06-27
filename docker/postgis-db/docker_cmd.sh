@@ -13,5 +13,7 @@ docker run --name $cont_name -e POSTGRES_PASSWORD=postgres -d -v  $PWD/../data:/
 
 until docker run --rm --link $cont_name:pg get_gdelt pg_isready -U redpig -h pg; do sleep 5; done
 
-docker run -it --link $cont_name:postgres --rm postgres \
-	    sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U oryx -d gdelt_db'
+docker run --rm -e PGPORT=5432 -e PGUSER=oryx -e PGPASSWORD=crake -e PGDATABASE=gdelt_db -e PGHOST=gdelt_host --link \"$cont_name\":gdelt_host postgres psql -c \"CREATE EXTENSION IF NOT EXISTS unaccent\"
+
+#docker run --it --link $cont_name:postgres --rm postgres  \
+#	    sh -c 'exec psql -h "$POSTGRES_PORT_5432_TCP_ADDR" -p "$POSTGRES_PORT_5432_TCP_PORT" -U oryx -d gdelt_db'

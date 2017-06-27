@@ -13,6 +13,5 @@ cd ./gdelt_data
 container_name='gdelt_db'
 host=$(docker inspect --format="{{ .NetworkSettings.IPAddress }}" $container_name)
 
-psql -h $host -d gdelt_db -U oryx -c "\copy gdelt_table (column1, column2)  from '/path/to/local/file.csv' with delimiter as ','"
-
+psql -h $host -d gdelt_db -p 5432 -U oryx -c "CREATE EXTENSION hstore;"
 
