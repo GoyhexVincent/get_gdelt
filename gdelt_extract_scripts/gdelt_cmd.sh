@@ -8,5 +8,5 @@ psql -h $host -d gdelt_db -p 5432 -U oryx -c "CREATE EXTENSION IF NOT EXISTS hst
 
 psql -h $host -d gdelt_db -p 5432 -U oryx -c "CREATE SCHEMA gdelt;"
 
-psql -h $host -d gdelt_db -p 5432 -U oryx -c "CREATE TABLE data (id bigserial PRIMARY KEY NOT NULL, goldsteinscale integer NOT NULL, date_added timestamp default NULL);"
+psql -h $host -d gdelt_db -p 5432 -U oryx -c "CREATE TABLE gdelt.data (id bigserial PRIMARY KEY NOT NULL, goldsteinscale integer NOT NULL, date_added timestamp default NULL);"
 
