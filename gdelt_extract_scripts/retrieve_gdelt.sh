@@ -15,5 +15,6 @@ rm *.zip
 container_name='gdelt_db'
 host=$(docker inspect --format="{{ .NetworkSettings.IPAddress }}" $container_name)
 
-psql -h $host -d gdelt_db -p 5432 -U oryx -c "COPY gdelt.data FROM '$date.export.CSV' WITH DELIMITER AS  E'\t'"
-
+psql -h $host -d gdelt_db -p 5432 -U oryx -c "\COPY gdelt.data FROM '$date.export.CSV' WITH DELIMITER AS  E'\t'"
+rm $date.export.CSV
+echo 'import successfull!'
