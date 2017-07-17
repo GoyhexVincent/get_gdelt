@@ -10,5 +10,6 @@ do
 	echo "$i"
 	unzip $i
 	rm $i
+        echo "${i::-4}"
 done
 
