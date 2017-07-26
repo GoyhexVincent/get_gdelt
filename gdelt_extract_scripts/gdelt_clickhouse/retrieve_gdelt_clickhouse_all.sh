@@ -8,7 +8,9 @@ container_name='gdelt_clickhouse'
 host=$(docker inspect --format="{{ .NetworkSettings.IPAddress }}" $container_name)
 
 cd ../gdelt_data
-array=($(ls ../gdelt_data))
+array=($(ls))
+
+echo ls
 
 for i in  "${array[@]}"
 do
@@ -16,7 +18,8 @@ do
 	unzip $i
 	##rm $i
         CSV="${i::-4}"
-        docker run -it --rm --link $container_name:clickhouse-server yandex/clickhouse-client -m ../gdelt_data:/gdelt_data --host /gdelt_data/CSV | clickhouse-server --query='INSERT INTO gdelt FORMAT CSV'
+	echo "$CSV"
+        cat $CSV | docker run  --rm --link $container_name:clickhouse-server yandex/clickhouse-client  clickhouse-client --host clickhouse-server --query='INSERT INTO gdelt FORMAT CSV'
 	echo 'import successful!'
 	##rm $CSV
 done
