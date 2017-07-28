@@ -16,11 +16,11 @@ for i in  "${array[@]}"
 do
 	echo "$i"
 	unzip $i
-	##rm $i
+	rm $i
         CSV="${i::-4}"
 	echo "$CSV"
         cat $CSV | docker run  -i --rm --link $container_name:clickhouse-server yandex/clickhouse-client  clickhouse-client --host clickhouse-server --query='INSERT INTO gdelt FORMAT TSV'
 	echo 'import successful!'
-	##rm $CSV
+	rm $CSV
 done
 
