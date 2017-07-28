@@ -19,7 +19,7 @@ do
 	##rm $i
         CSV="${i::-4}"
 	echo "$CSV"
-        cat $CSV | docker run  --rm --link $container_name:clickhouse-server yandex/clickhouse-client  clickhouse-client --host clickhouse-server --query='INSERT INTO gdelt FORMAT TSV'
+        cat $CSV | docker run  -i --rm --link $container_name:clickhouse-server yandex/clickhouse-client  clickhouse-client --host clickhouse-server --query='INSERT INTO gdelt FORMAT TSV'
 	echo 'import successful!'
 	##rm $CSV
 done
