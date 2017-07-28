@@ -1,5 +1,5 @@
 echo ' Every commands needed to create image + create container'
-echo ' Username Oryx psswd Crake dbname gdelt_db , if you want to change any of them check the init-database.sh file'
+echo ' Username postgres psswd postgres dbname gdelt_db , if you want to change any of them check the init-database.sh file'
 
 rm -rf ../data
 mkdir ../data

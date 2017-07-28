@@ -1,5 +1,5 @@
 
-# GDELT_PROJECT:  parse analyze and map gdelt data
+# GDELT_PROJECT:  Parse, analyze and map GDELT data
 
 1. run ./install_for_clickhouse.sh on your terminal
 
@@ -12,6 +12,7 @@
                                                    SELECT count(*) from gdelt;
 
 4. feel free to check out the gdelt data structure here: http://www.gdeltproject.org/data.html#documentation
+   GDELT 1.0 Data Format Documentation & CAMEO Code Reference are both particularly pertinent.
 
 
 5. Same goes for clickhouse documentation: https://clickhouse.yandex/docs/en/
