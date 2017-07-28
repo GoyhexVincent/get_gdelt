@@ -18,6 +18,7 @@ GDELT_PROJECT:  parse analyze and map gdelt data
 5 - Same goes for clickhouse documentation: https://clickhouse.yandex/docs/en/
 
 
+6 - If you quit and want to access your clickhouse db once again, here is the command: docker run -it --rm --link gdelt_clickhouse:clickhouse-server yandex/clickhouse-client --host clickhouse-server
 
 Some usefull links: 
     https://hub.docker.com/r/yandex/clickhouse-server/
