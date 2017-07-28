@@ -31,8 +31,12 @@ Some usefull links:
 
 ##### Rape occurences in France:
 
-`SELECT EventCode, Actor1Geo_CountryCode, SOURCEURL from gdelt where EventCode = '1821' AND Actor1Geo_CountryCode = 'FR'`
+`SELECT EventCode, Actor1Geo_CountryCode, SOURCEURL FROM gdelt WHERE EventCode = '1821' AND Actor1Geo_CountryCode = 'FR'`
 
 ##### Collect all articles talking about French president Emmanuel Macron: 
 
-`SELECT EventCode, SOURCEURL, DATEADDED from gdelt where SOURCEURL LIKE '%Macron%';`
+`SELECT EventCode, SOURCEURL, DATEADDED FROM gdelt WHERE SOURCEURL LIKE '%Macron%';`
+
+##### Check out the actions of the RedCross ONG around the world, using LAT LONG data:
+
+`SELECT EventCode, ActionGeo_Lat, ActionGeo_Long, SOURCEURL FROM gdelt WHERE Actor1Code = 'NGOHLHIRC' ORDER BY EventCode ASC;`
