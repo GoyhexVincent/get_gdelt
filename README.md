@@ -10,6 +10,7 @@
 
 3. you're all set, you can request your database: try 
                                                    SELECT count(*) from gdelt;
+                                                   DESCRIBE TABLE gdelt;
 
 4. feel free to check out the gdelt data structure here: http://www.gdeltproject.org/data.html#documentation
    GDELT 1.0 Data Format Documentation & CAMEO Code Reference are both particularly pertinent.
