@@ -29,5 +29,6 @@ Some usefull links:
 
 ### SQL REQUESTS EXAMPLES:
 
-Rape occurences in France:
+#####Rape occurences in France:
+
 `select EventCode, Actor1Geo_CountryCode, SOURCEURL from gdelt where EventCode = '1821' AND Actor1Geo_CountryCode = 'FR'` 
