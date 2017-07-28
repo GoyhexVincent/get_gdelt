@@ -2,14 +2,12 @@
 GDELT_PROJECT:  parse analyze and map gdelt data
 ================================================
 
-====================
-REPOSITORY STRUCTURE: 
-==================== 
+1- run ./install_for_clickhouse.sh on your terminal
 
-GDELT_EXTRACT_SCRIPTS -> All the files needed to download GDELT data and load it into a database. You can either use it as a "oneshot" retrieving 3 years worth of data, or use the files as a daily jenkins powered job.
+2- go make yourself a coffee
 
+3- you're all set, you can request your database: try 
+                                                   SELECT count(*) from gdelt;
 
-DOCKER -> Everything to easily setup a dockerized postgis database on your machine including extensions, schemas, roles and tables structure. 
+4 - the intermediate CSV files have already been removed from your computer
 
-
-JENKINS -> Everything to easily setup a dockerized jenkins container from which you can handle the daily update of your database. (Not yet implemented)
