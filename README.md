@@ -23,4 +23,11 @@
 
 Some usefull links: 
     https://hub.docker.com/r/yandex/clickhouse-server/
-    
+   
+
+
+
+### SQL REQUESTS EXAMPLES:
+
+Rape occurences in France:
+`select EventCode, Actor1Geo_CountryCode, SOURCEURL from gdelt where EventCode = '1821' AND Actor1Geo_CountryCode = 'FR'` 
