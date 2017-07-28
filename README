@@ -6,12 +6,19 @@ GDELT_PROJECT:  parse analyze and map gdelt data
 
 2- go make yourself a coffee
 
+(the intermediate CSV files are being removed as we insert them into the database, no need to tidy things up)
+
+
 3- you're all set, you can request your database: try 
                                                    SELECT count(*) from gdelt;
 
 4 - feel free to check out the gdelt data structure here: http://www.gdeltproject.org/data.html#documentation
 
 
+5 - Same goes for clickhouse documentation: https://clickhouse.yandex/docs/en/
 
-(the intermediate CSV files have already been removed from your computer)
 
+
+Some usefull links: 
+    https://hub.docker.com/r/yandex/clickhouse-server/
+    
