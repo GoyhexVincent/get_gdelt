@@ -31,4 +31,8 @@ Some usefull links:
 
 ##### Rape occurences in France:
 
-`select EventCode, Actor1Geo_CountryCode, SOURCEURL from gdelt where EventCode = '1821' AND Actor1Geo_CountryCode = 'FR'` 
+`SELECT EventCode, Actor1Geo_CountryCode, SOURCEURL from gdelt where EventCode = '1821' AND Actor1Geo_CountryCode = 'FR'`
+
+##### Collect all articles talking about French president Emmanuel Macron: 
+
+`SELECT EventCode, SOURCEURL, DATEADDED from gdelt where SOURCEURL LIKE '%Macron%';`
