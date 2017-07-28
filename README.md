@@ -1,6 +1,4 @@
-================================================
 GDELT_PROJECT:  parse analyze and map gdelt data
-================================================
 
 1- run ./install_for_clickhouse.sh on your terminal
 
