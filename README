@@ -9,5 +9,9 @@ GDELT_PROJECT:  parse analyze and map gdelt data
 3- you're all set, you can request your database: try 
                                                    SELECT count(*) from gdelt;
 
-4 - the intermediate CSV files have already been removed from your computer
+4 - feel free to check out the gdelt data structure here: http://www.gdeltproject.org/data.html#documentation
+
+
+
+(the intermediate CSV files have already been removed from your computer)
 
